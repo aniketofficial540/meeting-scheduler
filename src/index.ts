@@ -2,7 +2,7 @@
 import express, {Request, Response} from 'express';
 import dotenv from "dotenv";
 import sequelize from './config/dbConnection';
-// import routes from "./routes/index";
+import routes from "./routes/index";
 
 import "./modules/meeting/module/meeting.model";
 import "./modules/meeting/module/user.model";
@@ -15,7 +15,7 @@ const PORT = process.env.PORT;
 //middlewares
 app.use(express.json());
 
-// app.get("/", routes);
+app.use("/", routes);
 
 // function that will initialize the connection
 const startServer = async () => {
