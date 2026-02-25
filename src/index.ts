@@ -31,7 +31,7 @@ const startServer = async () => {
     });
 
   } catch (error) {
-    console.error('❌ Unable to start the server or connect to the database:', error);
+    console.error('Unable to start the server or connect to the database:', error);
   }
 };
 
